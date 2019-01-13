@@ -1,0 +1,30 @@
+Implement a basic calculator to evaluate a simple expression string.
+
+The expression string may contain open ( and closing parentheses ),
+the plus + or minus sign -, non-negative integers and empty spaces .
+
+Example 1:
+
+Input: "1 + 1"
+Output: 2
+Example 2:
+
+Input: " 2-1 + 2 "
+Output: 3
+Example 3:
+
+Input: "(1+(4+5+2)-3)+(6+8)"
+Output: 23
+Note:
+You may assume that the given expression is always valid.
+Do not use the eval built-in library function.
+
+
+实现基本计算器来评估简单的表达式字符串。
+
+表达式字符串可以包含open（和右括号），加号+或减号 - ，非负整数和空格。
+
+
+注意：
+您可以假设给定表达式始终有效。
+不要使用eval内置库函数。
