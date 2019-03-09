@@ -13,6 +13,27 @@ class Solution:
         :rtype: List[int]
         """
         result = list()
+        stack = list()
+        if root is None:
+            return result
+        while True:
+            if root.left is not None or root.right is not None:
+                stack.append(TreeNode(root.val))
+            else:
+                result.append(root.val)
+                if len(stack) > 0:
+                    root = stack.pop()
+                else:
+                    break
+                continue
+            if root.left is not None:
+                if root.right is not None:
+                    stack.append(root.right)
+                root = root.left
+            else:
+                root = root.right
+        return result
+
 
 
     def post_order(self, root, result):

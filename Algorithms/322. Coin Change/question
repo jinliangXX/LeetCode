@@ -1,0 +1,19 @@
+You are given coins of different denominations and a total amount of money amount.
+Write a function to compute the fewest number of coins that you need to make up that amount.
+If that amount of money cannot be made up by any combination of the coins, return -1.
+
+Example 1:
+
+Input: coins = [1, 2, 5], amount = 11
+Output: 3 
+Explanation: 11 = 5 + 5 + 1
+Example 2:
+
+Input: coins = [2], amount = 3
+Output: -1
+Note:
+You may assume that you have an infinite number of each kind of coin.
+
+
+你会得到不同面值的硬币和总额。写一个函数来计算你需要的最少的硬币数量。
+如果那笔钱不能由硬币的任何组合来补足，返回-1。

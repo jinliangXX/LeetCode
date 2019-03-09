@@ -13,9 +13,22 @@ class Solution:
         :rtype: List[int]
         """
         result = list()
+        stack = list()
         if root is None:
             return result
-        self.pre_order(root, result)
+        while True:
+            if root is not None:
+                result.append(root.val)
+                if root.left is not None:
+                    if root.right is not None:
+                        stack.append(root.right)
+                    root = root.left
+                elif root.right is not None:
+                    root = root.right
+                elif len(stack) > 0:
+                    root = stack.pop()
+                else:
+                    break
         return result
 
     def pre_order(self, root, result):
