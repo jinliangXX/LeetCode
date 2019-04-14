@@ -1,0 +1,34 @@
+Given two integers dividend and divisor, divide two integers without using multiplication, division and mod operator.
+
+Return the quotient after dividing dividend by divisor.
+
+The integer division should truncate toward zero.
+
+Example 1:
+
+Input: dividend = 10, divisor = 3
+Output: 3
+Example 2:
+
+Input: dividend = 7, divisor = -3
+Output: -2
+Note:
+
+Both dividend and divisor will be 32-bit signed integers.
+The divisor will never be 0.
+Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−231,  231 − 1].
+For the purpose of this problem, assume that your function returns 231 − 1 when the division result overflows.
+
+
+
+给定两个整数的被除数和除数，在不使用乘法、除法和余运算符的情况下对两个整数进行除法。
+
+除除数后返回商。
+
+整数除法应该向零截断。
+
+
+被除数和除数都是32位带符号整数。
+除数永远不会是0。
+假设我们处理的环境只能存储32位带符号整数范围内的整数:[- 231,231 - 1]。
+对于这个问题，假设函数在除法结果溢出时返回231 - 1。

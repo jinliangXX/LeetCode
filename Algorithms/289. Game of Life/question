@@ -1,0 +1,52 @@
+According to the Wikipedia's article: "The Game of Life, also known simply as Life,
+is a cellular automaton devised by the British mathematician John Horton Conway in 1970."
+
+Given a board with m by n cells, each cell has an initial state live (1) or dead (0).
+Each cell interacts with its eight neighbors (horizontal, vertical, diagonal) using the following four rules (taken from the above Wikipedia article):
+
+Any live cell with fewer than two live neighbors dies, as if caused by under-population.
+Any live cell with two or three live neighbors lives on to the next generation.
+Any live cell with more than three live neighbors dies, as if by over-population..
+Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.
+Write a function to compute the next state (after one update) of the board given its current state.
+The next state is created by applying the above rules simultaneously to every cell in the current state, where births and deaths occur simultaneously.
+
+Example:
+
+Input:
+[
+  [0,1,0],
+  [0,0,1],
+  [1,1,1],
+  [0,0,0]
+]
+Output:
+[
+  [0,0,0],
+  [1,0,1],
+  [0,1,1],
+  [0,1,0]
+]
+Follow up:
+
+Could you solve it in-place? Remember that the board needs to be updated at the same time:
+You cannot update some cells first and then use their updated values to update other cells.
+In this question, we represent the board using a 2D array.
+In principle, the board is infinite, which would cause problems when the active area encroaches the border of the array.
+How would you address these problems?
+
+根据维基百科的文章:“生命的游戏，也就是简单的生命，是由英国数学家约翰·霍顿·康威在1970年发明的一种细胞自动机。”
+
+给定一个由m×n个单元格组成的板，每个单元格都有一个初始状态live(1)或dead(0)。
+
+任何活的细胞如果少于两个活的邻居，就会死亡，好像是由于人口不足造成的。
+任何有两个或三个邻居的活细胞都能活到下一代。
+任何有三个以上邻居的活细胞都会死亡，就好像是由于人口过剩。
+任何有三个活邻居的死细胞都会变成活细胞，就像通过繁殖一样。
+编写一个函数来计算给定当前状态的下一个状态(在一次更新之后)。下一个状态是通过将上述规则同时应用于当前状态中的每个细胞而创建的，此时出生和死亡同时发生。
+
+
+跟进:
+
+你能当场解决吗?请记住，董事会需要同时更新:您不能先更新某些单元格，然后使用它们的更新值来更新其他单元格。
+在这个问题中，我们使用2D数组来表示黑板。从理论上讲，板是无限的，当有源区域侵犯阵列边界时，会产生问题。你将如何解决这些问题?

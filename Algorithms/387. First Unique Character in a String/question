@@ -1,0 +1,17 @@
+Given a string, find the first non-repeating character in it and return it's index.
+If it doesn't exist, return -1.
+
+Examples:
+
+s = "leetcode"
+return 0.
+
+s = "loveleetcode",
+return 2.
+Note: You may assume the string contain only lowercase letters.
+
+
+给定一个字符串，找到它中的第一个非重复字符并返回它的索引。 如果它不存在，则返回-1。
+
+
+注意：您可以假设该字符串仅包含小写字母。
