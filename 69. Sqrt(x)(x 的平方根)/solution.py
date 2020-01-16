@@ -1,12 +1,14 @@
 class Solution:
     def mySqrt(self, x: int) -> int:
-        left, right = 0, x
+        left, right = 0, x + 1
         while left < right:
-            mid = (left + right) // 2
-            if (mid + 1) ** 2 <= x:
-                left = mid + 1
+            mid = (left + right + 1) // 2
+            if mid ** 2 < x:
+                left = mid
+            elif mid ** 2 == x:
+                left = mid
             else:
-                right = mid
+                right = mid - 1
 
         return left
 
@@ -16,5 +18,5 @@ class Solution:
 
 if __name__ == '__main__':
     so = Solution()
-    re = so.mySqrt(8)
+    re = so.mySqrt(4)
     print(re)

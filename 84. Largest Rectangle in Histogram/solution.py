@@ -6,8 +6,7 @@ class Solution:
                              heights: List[int]) -> int:
         max = 0
         for i, num in enumerate(heights):
-            if i == len(heights) - 1 or heights[
-                i + 1] < num:
+            if i == len(heights) - 1 or heights[i + 1] < num:
                 min = num
                 left = i
                 while left >= 0:

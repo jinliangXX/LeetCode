@@ -1,36 +1,28 @@
 class Solution:
     def isMatch(self, s: str, p: str) -> bool:
-        def isMatch(i: int, j: int, last: str, num: int):
-            if i >= len(s):
-                return True
-            if j >= len(p):
-                return False
-            if p[j] == '*':
-                if last == '*' or s[i] == last:
-                    now_result = False
-                    now_result = now_result or isMatch(i + 1, j + 1, s[i], num)
-                    for now_id in range(1, num + 1):
-                        if s[i + now_id] == s[i]:
-                            now_result = now_result or isMatch(i + 1 + now_id,
-                                                               j + 1 + now_id, s[i],
-                                                               num - now_id)
-                        else:
-                            break
-                    return now_result
-                else:
-                    return False
+        result = [[False for _ in range(len(s) + 1)] for _ in range(len(p) + 1)]
+        result[0][0] = True
+        for i in range(1, len(p) + 1):
+            if p[i - 1] == '*':
+                result[i][0] = result[i - 1][0]
             else:
-                if s[i] == p[j] or p[j] == '.':
-                    return isMatch(i + 1, j + 1, s[i], num)
+                result[i][0] = False
+        for i in range(1, len(p) + 1):
+            for j in range(1, len(s) + 1):
+                if p[i - 1] == '*':
+                    if i - 2 >= 0 and p[i - 2] == '.':
+                        result[i][j] = True
+                    else:
+                        result[i][j] = result[i - 1][j] or (
+                                j - 1 < 0 or (s[j - 2] == s[j - 1]) and result[i - 1][
+                            j - 1])
+                elif p[i - 1] == '.' or p[i - 1] == s[j - 1]:
+                    result[i][j] = result[i - 1][j - 1]
                 else:
-                    return False
-
-        lenght = len(s) - len(p)
-        result = isMatch(0, 0, '*', lenght)
-        return result
+                    result[i][j] = False
+        return result[-1][-1]
 
 
 if __name__ == '__main__':
     so = Solution()
-    re = so.isMatch("ab", ".*")
-    print(re)
+    print(so.isMatch('aab', 'c*a*b'))

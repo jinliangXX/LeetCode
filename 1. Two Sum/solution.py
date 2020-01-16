@@ -1,4 +1,9 @@
+class Node:
+    __init__
+
 class Solution:
+
+
     def twoSum_one(self, nums, target):
         """
         :type nums: List[int]
