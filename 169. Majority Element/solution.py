@@ -1,6 +1,11 @@
 from typing import List
 
+'''
+经典题目
 
+https://leetcode-cn.com/problems/majority-element/solution/duo-shu-yuan-su-by-leetcode-solution/
+
+'''
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
         now = 0
